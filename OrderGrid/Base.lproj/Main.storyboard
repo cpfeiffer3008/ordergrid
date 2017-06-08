@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pGa-sP-Tb6">
-    <device id="ipad12_9" orientation="landscape">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sY8-Gg-4Cy">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,21 +19,21 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="No8-Pd-8XF">
-                                <rect key="frame" x="20" y="64" width="1326" height="960"/>
+                                <rect key="frame" x="20" y="114" width="728" height="853"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xx1-Lm-Xqz">
                                     <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="jYO-U9-MOh" customClass="OrderCollectionViewCell" customModule="OrderGrid" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="5" width="300" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -93,15 +93,41 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qN-kx-Uyd">
+                                <rect key="frame" x="441" y="28" width="307" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tisch:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwN-C7-zQ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTk-Ah-6qI">
+                                        <rect key="frame" x="107" y="0.0" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0iK-rF-EOO"/>
+                                            <constraint firstAttribute="height" constant="100" id="Lya-8M-lSS"/>
+                                        </constraints>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306.5" id="Gq6-fq-p5z"/>
+                                    <constraint firstAttribute="height" constant="100" id="R9N-uZ-EXn"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="No8-Pd-8XF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="M0M-Jv-U1B"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="No8-Pd-8XF" secondAttribute="bottom" id="Qb6-kA-kAM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="No8-Pd-8XF" secondAttribute="trailing" id="XYa-ta-0rp"/>
-                            <constraint firstItem="No8-Pd-8XF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="xoD-gn-CdP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6qN-kx-Uyd" secondAttribute="trailing" constant="0.5" id="3Om-lP-Uyu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="No8-Pd-8XF" secondAttribute="bottom" constant="8" symbolic="YES" id="CX9-lD-tfR"/>
+                            <constraint firstItem="No8-Pd-8XF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="94" id="GXG-jB-Fxt"/>
+                            <constraint firstItem="6qN-kx-Uyd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Mbu-00-JWO"/>
+                            <constraint firstItem="6qN-kx-Uyd" firstAttribute="trailing" secondItem="No8-Pd-8XF" secondAttribute="trailing" id="OLk-nC-zk6"/>
+                            <constraint firstItem="No8-Pd-8XF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="g1d-d2-Mo4"/>
+                            <constraint firstItem="No8-Pd-8XF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zMv-aV-nfc"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="5s7-Aw-CIE"/>
                     <navigationItem key="navigationItem" id="X9L-ng-bRk"/>
                     <connections>
                         <outlet property="collectionView" destination="No8-Pd-8XF" id="u5K-Ay-uv0"/>
@@ -109,28 +135,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="132"/>
+            <point key="canvasLocation" x="1537.5" y="131.25"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="MzE-W7-7Vd">
+        <!--Tab Bar Controller-->
+        <scene sceneID="lFk-w4-xq8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pGa-sP-Tb6" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sY8-Gg-4Cy" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" shadowImage="five" id="Ifh-TU-MXg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ofl-9g-lsY">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="W1i-Ap-PrA"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="b6Y-pl-0Ue"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b8S-Lk-TYa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X1N-T7-Z6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.48169838945827" y="105.46875"/>
+            <point key="canvasLocation" x="844.65592972181548" y="131.8359375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="five" width="1000" height="1000"/>
-    </resources>
 </document>

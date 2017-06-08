@@ -13,7 +13,15 @@ class OrderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ItemNameLabel: UILabel!
     @IBOutlet weak var ItemPriceLabel: UILabel!
     
+    var FirebaseController : FirebasePushController! = FirebasePushController()
+    
+    
+    
+    
     @IBAction func OrderAction(_ sender: Any) {
         print("Item to be ordered!" + ItemNameLabel.text!)
+        FirebaseController.addNewOrder(name: ItemNameLabel.text!, price: ItemPriceLabel.text!, table: "Tisch 1")
+        
+        
     }
 }

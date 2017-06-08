@@ -1,4 +1,5 @@
 //
+//
 //  ViewController.swift
 //  OrderGrid
 //
@@ -23,8 +24,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
         collectionView.dataSource = self
         collectionView.delegate = self
-        }
-
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,7 +53,5 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
-
-
 }
 

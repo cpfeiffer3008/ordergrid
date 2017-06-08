@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3679073724A5F8F08D8AA6C9 /* Pods_OrderGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75777E728D007AEDE79564DF /* Pods_OrderGridUITests.framework */; };
 		6D78CF04A73E9152D85D1C42 /* Pods_OrderGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99350BBBCEF09B97C9A02607 /* Pods_OrderGridTests.framework */; };
+		AA2F4E011EE920190049EE47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA2F4E001EE920190049EE47 /* GoogleService-Info.plist */; };
 		AA49EBCC1ECC55AF008A615F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBCB1ECC55AF008A615F /* AppDelegate.swift */; };
 		AA49EBCE1ECC55AF008A615F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBCD1ECC55AF008A615F /* ViewController.swift */; };
 		AA49EBD11ECC55AF008A615F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA49EBCF1ECC55AF008A615F /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		AAA4810D1EDEC04500F8B33B /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */; };
 		AAA481151EDEEC6600F8B33B /* FirebaseRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA481141EDEEC6600F8B33B /* FirebaseRDModel.swift */; };
 		AAA481181EDEF70000F8B33B /* FirebasePushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA481171EDEF70000F8B33B /* FirebasePushController.swift */; };
-		AAEDD0EF1ED48B5600E8339D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAEDD0EE1ED48B5600E8339D /* GoogleService-Info.plist */; };
 		AAEDD0F21ED48BBB00E8339D /* OrderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEDD0F11ED48BBB00E8339D /* OrderItem.swift */; };
 		F523A2A8A657CE5A2704C502 /* Pods_OrderGrid.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 423D81C3878B77CF591B60F1 /* Pods_OrderGrid.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +48,7 @@
 		6C7FB5FEBF10BFB1D2DBD4FC /* Pods-OrderGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderGrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrderGrid/Pods-OrderGrid.release.xcconfig"; sourceTree = "<group>"; };
 		75777E728D007AEDE79564DF /* Pods_OrderGridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderGridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99350BBBCEF09B97C9A02607 /* Pods_OrderGridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderGridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2F4E001EE920190049EE47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AA49EBC81ECC55AF008A615F /* OrderGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA49EBCB1ECC55AF008A615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA49EBCD1ECC55AF008A615F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,7 +65,6 @@
 		AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAA481141EDEEC6600F8B33B /* FirebaseRDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseRDModel.swift; sourceTree = "<group>"; };
 		AAA481171EDEF70000F8B33B /* FirebasePushController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebasePushController.swift; sourceTree = "<group>"; };
-		AAEDD0EE1ED48B5600E8339D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAEDD0F11ED48BBB00E8339D /* OrderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItem.swift; sourceTree = "<group>"; };
 		DA06D2E2A1DC69F42E49CA8A /* Pods-OrderGridUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderGridUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrderGridUITests/Pods-OrderGridUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E50811A2E47936DA3F9459B4 /* Pods-OrderGridTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderGridTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrderGridTests/Pods-OrderGridTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,10 +138,10 @@
 				AAA4810B1EDEC02C00F8B33B /* CollectionView */,
 				AAEDD0F01ED48BA000E8339D /* OrderModel */,
 				AA49EBCB1ECC55AF008A615F /* AppDelegate.swift */,
+				AA2F4E001EE920190049EE47 /* GoogleService-Info.plist */,
 				AA49EBCF1ECC55AF008A615F /* Main.storyboard */,
 				AA49EBD21ECC55AF008A615F /* Assets.xcassets */,
 				AA49EBD41ECC55AF008A615F /* LaunchScreen.storyboard */,
-				AAEDD0EE1ED48B5600E8339D /* GoogleService-Info.plist */,
 				AA49EBD71ECC55AF008A615F /* Info.plist */,
 			);
 			path = OrderGrid;
@@ -324,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA49EBD61ECC55AF008A615F /* LaunchScreen.storyboard in Resources */,
-				AAEDD0EF1ED48B5600E8339D /* GoogleService-Info.plist in Resources */,
+				AA2F4E011EE920190049EE47 /* GoogleService-Info.plist in Resources */,
 				AA49EBD31ECC55AF008A615F /* Assets.xcassets in Resources */,
 				AA49EBD11ECC55AF008A615F /* Main.storyboard in Resources */,
 			);
