@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		3679073724A5F8F08D8AA6C9 /* Pods_OrderGridUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75777E728D007AEDE79564DF /* Pods_OrderGridUITests.framework */; };
 		6D78CF04A73E9152D85D1C42 /* Pods_OrderGridTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99350BBBCEF09B97C9A02607 /* Pods_OrderGridTests.framework */; };
+		AA147EFF1EF927AC00BF9509 /* OrderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA147EFE1EF927AC00BF9509 /* OrderDataSource.swift */; };
+		AA147F011EF927BC00BF9509 /* OrderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA147F001EF927BC00BF9509 /* OrderDelegate.swift */; };
 		AA2F4E011EE920190049EE47 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA2F4E001EE920190049EE47 /* GoogleService-Info.plist */; };
+		AA2F4E061EE92A100049EE47 /* TablePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4E051EE92A100049EE47 /* TablePickerDataSource.swift */; };
+		AA2F4E081EE92A290049EE47 /* TablePickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2F4E071EE92A290049EE47 /* TablePickerDelegate.swift */; };
 		AA49EBCC1ECC55AF008A615F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBCB1ECC55AF008A615F /* AppDelegate.swift */; };
 		AA49EBCE1ECC55AF008A615F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBCD1ECC55AF008A615F /* ViewController.swift */; };
 		AA49EBD11ECC55AF008A615F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA49EBCF1ECC55AF008A615F /* Main.storyboard */; };
@@ -17,6 +21,8 @@
 		AA49EBD61ECC55AF008A615F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA49EBD41ECC55AF008A615F /* LaunchScreen.storyboard */; };
 		AA49EBE11ECC55AF008A615F /* OrderGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBE01ECC55AF008A615F /* OrderGridTests.swift */; };
 		AA49EBEC1ECC55AF008A615F /* OrderGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBEB1ECC55AF008A615F /* OrderGridUITests.swift */; };
+		AA9355181EF1443D00DA1876 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9355171EF1443D00DA1876 /* MyOrderViewController.swift */; };
+		AA93551D1EF1900500DA1876 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93551C1EF1900500DA1876 /* OrderCell.swift */; };
 		AAA4810D1EDEC04500F8B33B /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */; };
 		AAA481151EDEEC6600F8B33B /* FirebaseRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA481141EDEEC6600F8B33B /* FirebaseRDModel.swift */; };
 		AAA481181EDEF70000F8B33B /* FirebasePushController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA481171EDEF70000F8B33B /* FirebasePushController.swift */; };
@@ -48,7 +54,11 @@
 		6C7FB5FEBF10BFB1D2DBD4FC /* Pods-OrderGrid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderGrid.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrderGrid/Pods-OrderGrid.release.xcconfig"; sourceTree = "<group>"; };
 		75777E728D007AEDE79564DF /* Pods_OrderGridUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderGridUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		99350BBBCEF09B97C9A02607 /* Pods_OrderGridTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrderGridTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA147EFE1EF927AC00BF9509 /* OrderDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDataSource.swift; sourceTree = "<group>"; };
+		AA147F001EF927BC00BF9509 /* OrderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDelegate.swift; sourceTree = "<group>"; };
 		AA2F4E001EE920190049EE47 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AA2F4E051EE92A100049EE47 /* TablePickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablePickerDataSource.swift; sourceTree = "<group>"; };
+		AA2F4E071EE92A290049EE47 /* TablePickerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablePickerDelegate.swift; sourceTree = "<group>"; };
 		AA49EBC81ECC55AF008A615F /* OrderGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA49EBCB1ECC55AF008A615F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA49EBCD1ECC55AF008A615F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +72,8 @@
 		AA49EBE71ECC55AF008A615F /* OrderGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA49EBEB1ECC55AF008A615F /* OrderGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGridUITests.swift; sourceTree = "<group>"; };
 		AA49EBED1ECC55AF008A615F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA9355171EF1443D00DA1876 /* MyOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
+		AA93551C1EF1900500DA1876 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
 		AAA481141EDEEC6600F8B33B /* FirebaseRDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseRDModel.swift; sourceTree = "<group>"; };
 		AAA481171EDEF70000F8B33B /* FirebasePushController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebasePushController.swift; sourceTree = "<group>"; };
@@ -109,6 +121,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AA2F4E041EE9295F0049EE47 /* TablePicker */ = {
+			isa = PBXGroup;
+			children = (
+				AA2F4E051EE92A100049EE47 /* TablePickerDataSource.swift */,
+				AA2F4E071EE92A290049EE47 /* TablePickerDelegate.swift */,
+			);
+			name = TablePicker;
+			sourceTree = "<group>";
+		};
 		AA49EBBF1ECC55AF008A615F = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +155,10 @@
 		AA49EBCA1ECC55AF008A615F /* OrderGrid */ = {
 			isa = PBXGroup;
 			children = (
+				AA9355161EF1433700DA1876 /* MyOrders */,
+				AA2F4E041EE9295F0049EE47 /* TablePicker */,
 				AAA481161EDEF66F00F8B33B /* Controllers */,
-				AAA4810B1EDEC02C00F8B33B /* CollectionView */,
+				AAA4810B1EDEC02C00F8B33B /* MenuView */,
 				AAEDD0F01ED48BA000E8339D /* OrderModel */,
 				AA49EBCB1ECC55AF008A615F /* AppDelegate.swift */,
 				AA2F4E001EE920190049EE47 /* GoogleService-Info.plist */,
@@ -165,13 +188,32 @@
 			path = OrderGridUITests;
 			sourceTree = "<group>";
 		};
-		AAA4810B1EDEC02C00F8B33B /* CollectionView */ = {
+		AA9355161EF1433700DA1876 /* MyOrders */ = {
+			isa = PBXGroup;
+			children = (
+				AA93551B1EF17B7600DA1876 /* MyOrderTableView */,
+				AA9355171EF1443D00DA1876 /* MyOrderViewController.swift */,
+			);
+			name = MyOrders;
+			sourceTree = "<group>";
+		};
+		AA93551B1EF17B7600DA1876 /* MyOrderTableView */ = {
+			isa = PBXGroup;
+			children = (
+				AA93551C1EF1900500DA1876 /* OrderCell.swift */,
+				AA147EFE1EF927AC00BF9509 /* OrderDataSource.swift */,
+				AA147F001EF927BC00BF9509 /* OrderDelegate.swift */,
+			);
+			name = MyOrderTableView;
+			sourceTree = "<group>";
+		};
+		AAA4810B1EDEC02C00F8B33B /* MenuView */ = {
 			isa = PBXGroup;
 			children = (
 				AA49EBCD1ECC55AF008A615F /* ViewController.swift */,
 				AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */,
 			);
-			name = CollectionView;
+			name = MenuView;
 			sourceTree = "<group>";
 		};
 		AAA481161EDEF66F00F8B33B /* Controllers */ = {
@@ -491,8 +533,14 @@
 			files = (
 				AAA481181EDEF70000F8B33B /* FirebasePushController.swift in Sources */,
 				AA49EBCE1ECC55AF008A615F /* ViewController.swift in Sources */,
+				AA93551D1EF1900500DA1876 /* OrderCell.swift in Sources */,
 				AA49EBCC1ECC55AF008A615F /* AppDelegate.swift in Sources */,
+				AA2F4E061EE92A100049EE47 /* TablePickerDataSource.swift in Sources */,
+				AA9355181EF1443D00DA1876 /* MyOrderViewController.swift in Sources */,
 				AAA481151EDEEC6600F8B33B /* FirebaseRDModel.swift in Sources */,
+				AA147EFF1EF927AC00BF9509 /* OrderDataSource.swift in Sources */,
+				AA2F4E081EE92A290049EE47 /* TablePickerDelegate.swift in Sources */,
+				AA147F011EF927BC00BF9509 /* OrderDelegate.swift in Sources */,
 				AAA4810D1EDEC04500F8B33B /* OrderCollectionViewCell.swift in Sources */,
 				AAEDD0F21ED48BBB00E8339D /* OrderItem.swift in Sources */,
 			);

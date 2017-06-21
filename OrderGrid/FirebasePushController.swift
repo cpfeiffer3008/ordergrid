@@ -11,10 +11,23 @@ import Firebase
 
 class FirebasePushController: NSObject {
     let orderref = Database.database().reference(withPath: "order")
+    let resref = Database.database().reference(withPath: "restaurant")
+    var thisResRef = DatabaseReference()
     
-    func addNewOrder (name : String , price : String, table : String){
+    override init() {
+        super .init()
+        thisResRef = resref.child("schlappenbiertränke")
+    }
+
+    
+    func addNewOrder (name : String , price : String, table : Int){
         let orderitem = OrderItem(name: name, table: table, price: price)
         let orderItemRef = self.orderref.childByAutoId()
         orderItemRef.setValue(orderitem.toAnyObject())
     }
+    
+    func addRestaurantRef(){
+    }
+    
+    
 }

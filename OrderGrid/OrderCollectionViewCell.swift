@@ -12,6 +12,7 @@ class OrderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ItemImageView: UIImageView!
     @IBOutlet weak var ItemNameLabel: UILabel!
     @IBOutlet weak var ItemPriceLabel: UILabel!
+    let model : FirebaseRDModel = FirebaseRDModel()
     
     var FirebaseController : FirebasePushController! = FirebasePushController()
     
@@ -20,7 +21,7 @@ class OrderCollectionViewCell: UICollectionViewCell {
     
     @IBAction func OrderAction(_ sender: Any) {
         print("Item to be ordered!" + ItemNameLabel.text!)
-        FirebaseController.addNewOrder(name: ItemNameLabel.text!, price: ItemPriceLabel.text!, table: "Tisch 1")
+        FirebaseController.addNewOrder(name: ItemNameLabel.text!, price: ItemPriceLabel.text!, table: model.getTable())
         
         
     }

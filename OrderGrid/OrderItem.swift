@@ -13,11 +13,11 @@ struct OrderItem {
     
     let key: String
     let name: String
-    let table: String
+    let table: Int
     let ref: DatabaseReference?
     var price: String
     
-    init(name: String, table: String, price: String, key: String = "") {
+    init(name: String, table: Int, price: String, key: String = "") {
         self.key = key
         self.name = name
         self.table = table
@@ -29,7 +29,7 @@ struct OrderItem {
         key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
         name = snapshotValue["name"] as! String
-        table = snapshotValue["table"] as! String
+        table = snapshotValue["table"] as! Int
         price = snapshotValue["price"] as! String
         ref = snapshot.ref
     }
