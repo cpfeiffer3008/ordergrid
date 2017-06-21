@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class FirebasePushController: NSObject {
+class FirebaseDatabasePushController: NSObject {
     let orderref = Database.database().reference(withPath: "order")
     let resref = Database.database().reference(withPath: "restaurant")
     var thisResRef = DatabaseReference()
@@ -26,8 +26,7 @@ class FirebasePushController: NSObject {
         orderItemRef.setValue(orderitem.toAnyObject())
     }
     
-    func addRestaurantRef(){
-    }
+    
     
     
 }

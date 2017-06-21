@@ -14,7 +14,7 @@ class OrderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ItemPriceLabel: UILabel!
     let model : FirebaseRDModel = FirebaseRDModel()
     
-    var FirebaseController : FirebasePushController! = FirebasePushController()
+    var FirebaseController : FirebaseDatabasePushController! = FirebaseDatabasePushController()
     
     
     

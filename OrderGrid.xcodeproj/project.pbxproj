@@ -21,6 +21,11 @@
 		AA49EBD61ECC55AF008A615F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA49EBD41ECC55AF008A615F /* LaunchScreen.storyboard */; };
 		AA49EBE11ECC55AF008A615F /* OrderGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBE01ECC55AF008A615F /* OrderGridTests.swift */; };
 		AA49EBEC1ECC55AF008A615F /* OrderGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA49EBEB1ECC55AF008A615F /* OrderGridUITests.swift */; };
+		AA59BEC71EFA87130027BC82 /* FirebaseStorageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59BEC61EFA87130027BC82 /* FirebaseStorageController.swift */; };
+		AA59BECB1EFA97730027BC82 /* MenueItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59BECA1EFA97730027BC82 /* MenueItem.swift */; };
+		AA59BECD1EFA9AB10027BC82 /* FirebaseMenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59BECC1EFA9AB10027BC82 /* FirebaseMenueModel.swift */; };
+		AA59BED11EFAA0DF0027BC82 /* MenueDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA59BED01EFAA0DF0027BC82 /* MenueDataSource.swift */; };
+		AA8046901EFAAA1700C7DD4B /* MenueDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA80468F1EFAAA1700C7DD4B /* MenueDelegate.swift */; };
 		AA9355181EF1443D00DA1876 /* MyOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9355171EF1443D00DA1876 /* MyOrderViewController.swift */; };
 		AA93551D1EF1900500DA1876 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA93551C1EF1900500DA1876 /* OrderCell.swift */; };
 		AAA4810D1EDEC04500F8B33B /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */; };
@@ -72,6 +77,11 @@
 		AA49EBE71ECC55AF008A615F /* OrderGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA49EBEB1ECC55AF008A615F /* OrderGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderGridUITests.swift; sourceTree = "<group>"; };
 		AA49EBED1ECC55AF008A615F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA59BEC61EFA87130027BC82 /* FirebaseStorageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseStorageController.swift; sourceTree = "<group>"; };
+		AA59BECA1EFA97730027BC82 /* MenueItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenueItem.swift; sourceTree = "<group>"; };
+		AA59BECC1EFA9AB10027BC82 /* FirebaseMenueModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseMenueModel.swift; sourceTree = "<group>"; };
+		AA59BED01EFAA0DF0027BC82 /* MenueDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenueDataSource.swift; sourceTree = "<group>"; };
+		AA80468F1EFAAA1700C7DD4B /* MenueDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenueDelegate.swift; sourceTree = "<group>"; };
 		AA9355171EF1443D00DA1876 /* MyOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrderViewController.swift; sourceTree = "<group>"; };
 		AA93551C1EF1900500DA1876 /* OrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -158,7 +168,7 @@
 				AA9355161EF1433700DA1876 /* MyOrders */,
 				AA2F4E041EE9295F0049EE47 /* TablePicker */,
 				AAA481161EDEF66F00F8B33B /* Controllers */,
-				AAA4810B1EDEC02C00F8B33B /* MenuView */,
+				AAA4810B1EDEC02C00F8B33B /* Menue */,
 				AAEDD0F01ED48BA000E8339D /* OrderModel */,
 				AA49EBCB1ECC55AF008A615F /* AppDelegate.swift */,
 				AA2F4E001EE920190049EE47 /* GoogleService-Info.plist */,
@@ -188,6 +198,24 @@
 			path = OrderGridUITests;
 			sourceTree = "<group>";
 		};
+		AA59BEC91EFA97630027BC82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA59BECA1EFA97730027BC82 /* MenueItem.swift */,
+				AA59BECC1EFA9AB10027BC82 /* FirebaseMenueModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AA59BECF1EFAA0240027BC82 /* MenueCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				AA59BED01EFAA0DF0027BC82 /* MenueDataSource.swift */,
+				AA80468F1EFAAA1700C7DD4B /* MenueDelegate.swift */,
+			);
+			name = MenueCollectionView;
+			sourceTree = "<group>";
+		};
 		AA9355161EF1433700DA1876 /* MyOrders */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,19 +235,22 @@
 			name = MyOrderTableView;
 			sourceTree = "<group>";
 		};
-		AAA4810B1EDEC02C00F8B33B /* MenuView */ = {
+		AAA4810B1EDEC02C00F8B33B /* Menue */ = {
 			isa = PBXGroup;
 			children = (
+				AA59BECF1EFAA0240027BC82 /* MenueCollectionView */,
+				AA59BEC91EFA97630027BC82 /* Model */,
 				AA49EBCD1ECC55AF008A615F /* ViewController.swift */,
 				AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */,
 			);
-			name = MenuView;
+			name = Menue;
 			sourceTree = "<group>";
 		};
 		AAA481161EDEF66F00F8B33B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				AAA481171EDEF70000F8B33B /* FirebasePushController.swift */,
+				AA59BEC61EFA87130027BC82 /* FirebaseStorageController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -531,16 +562,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA59BECD1EFA9AB10027BC82 /* FirebaseMenueModel.swift in Sources */,
 				AAA481181EDEF70000F8B33B /* FirebasePushController.swift in Sources */,
+				AA59BECB1EFA97730027BC82 /* MenueItem.swift in Sources */,
 				AA49EBCE1ECC55AF008A615F /* ViewController.swift in Sources */,
 				AA93551D1EF1900500DA1876 /* OrderCell.swift in Sources */,
+				AA59BED11EFAA0DF0027BC82 /* MenueDataSource.swift in Sources */,
 				AA49EBCC1ECC55AF008A615F /* AppDelegate.swift in Sources */,
 				AA2F4E061EE92A100049EE47 /* TablePickerDataSource.swift in Sources */,
 				AA9355181EF1443D00DA1876 /* MyOrderViewController.swift in Sources */,
+				AA8046901EFAAA1700C7DD4B /* MenueDelegate.swift in Sources */,
 				AAA481151EDEEC6600F8B33B /* FirebaseRDModel.swift in Sources */,
 				AA147EFF1EF927AC00BF9509 /* OrderDataSource.swift in Sources */,
 				AA2F4E081EE92A290049EE47 /* TablePickerDelegate.swift in Sources */,
 				AA147F011EF927BC00BF9509 /* OrderDelegate.swift in Sources */,
+				AA59BEC71EFA87130027BC82 /* FirebaseStorageController.swift in Sources */,
 				AAA4810D1EDEC04500F8B33B /* OrderCollectionViewCell.swift in Sources */,
 				AAEDD0F21ED48BBB00E8339D /* OrderItem.swift in Sources */,
 			);
