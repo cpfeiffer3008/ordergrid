@@ -1,0 +1,6 @@
+framework module Pods_OrderGrid {
+  umbrella header "Pods-OrderGrid-umbrella.h"
+
+  export *
+  module * { export * }
+}
