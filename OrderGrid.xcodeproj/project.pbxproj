@@ -210,6 +210,7 @@
 		AA59BECF1EFAA0240027BC82 /* MenueCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */,
 				AA59BED01EFAA0DF0027BC82 /* MenueDataSource.swift */,
 				AA80468F1EFAAA1700C7DD4B /* MenueDelegate.swift */,
 			);
@@ -241,7 +242,6 @@
 				AA59BECF1EFAA0240027BC82 /* MenueCollectionView */,
 				AA59BEC91EFA97630027BC82 /* Model */,
 				AA49EBCD1ECC55AF008A615F /* ViewController.swift */,
-				AAA4810C1EDEC04500F8B33B /* OrderCollectionViewCell.swift */,
 			);
 			name = Menue;
 			sourceTree = "<group>";

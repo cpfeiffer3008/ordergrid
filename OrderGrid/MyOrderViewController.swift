@@ -14,6 +14,7 @@ class MyOrderViewController: UIViewController {
     @IBOutlet weak var OrderTable: UITableView!
     var datasource : OrderDataSource!
     var delegate : OrderDelegate!
+    @IBOutlet weak var totalPrice: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +51,15 @@ class MyOrderViewController: UIViewController {
     func reloadOrderTable(){
         print("was told to reload Table!")
         OrderTable.reloadData()
+        calculateTotalPrice()
     }
     
     func setSelectedTableLabel(){
     SelectedTableLabel.text = ("Tisch: \(model.getTable())")
+    }
+    
+    func calculateTotalPrice(){
+       totalPrice.text =  String(model.calculateToatalPrice())
     }
     
 

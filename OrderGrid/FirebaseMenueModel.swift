@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 
 class FirebaseMenueSingleton{
     
     static let sharedInstance = FirebaseMenueSingleton()
     fileprivate var data : [MenueItem] = []
+    let ref = Database.database().reference(withPath: "menue")
     
     
     private init (){
@@ -46,6 +48,25 @@ class FirebaseMenueModel: NSObject {
     
     func append(element : MenueItem){
         model.data.append(element)
+    }
+    
+    func observeFirebaseMenue(){
+        model.ref.observe(.value, with: { snapshot in
+            print(snapshot)
+            var newItems: [MenueItem] = []
+            for item in snapshot.children {
+                let menuItem = MenueItem(snapshot: item as! DataSnapshot)
+                newItems.append(menuItem)
+            }
+            self.model.data = newItems
+            print("New Number of Entries is: \(self.model.data.count)")
+            self.notifyCollectionToReload()
+        })
+    }
+    
+    func notifyCollectionToReload(){
+        let nc = NotificationCenter.default
+        nc.post(name: Notification.Name("fireReloadCollection"), object: nil)
     }
         
 }

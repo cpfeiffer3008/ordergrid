@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class MenueDataSource: NSObject, UICollectionViewDataSource {
     fileprivate let data : FirebaseMenueModel
+    fileprivate let FIRStorageController : FirebaseStorageController
     
     override init() {
         data = FirebaseMenueModel()
+        FIRStorageController = FirebaseStorageController()
     }
     
     @available(iOS 6.0, *)
@@ -27,8 +30,7 @@ class MenueDataSource: NSObject, UICollectionViewDataSource {
         
         cell.ItemNameLabel.text = tempitem.name
         cell.ItemPriceLabel.text = String("\(tempitem.price) €")
-        
-        cell.ItemImageView.image = #imageLiteral(resourceName: "one")
+        cell.ItemImageView.image = FIRStorageController.downloadFromFIRStorage(ref: tempitem.image)
         cell.ItemImageView.contentMode = .scaleAspectFit
         print("setting up cell" + String(describing: indexPath))
         
