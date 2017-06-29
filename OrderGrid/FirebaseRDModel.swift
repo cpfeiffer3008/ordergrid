@@ -16,9 +16,11 @@ class FirebaseSingleton{
     fileprivate var selectedTable = 1
     fileprivate var tableCount = 5
     fileprivate var RestaurantName : String = ""
+    fileprivate var Itemtobeordered : MenueItem? = nil
     let ref = Database.database().reference(withPath: "order")
     let ref2 = Database.database().reference(withPath: "restaurant/MyFirstRestaurant")
     fileprivate var dataforTable : [OrderItem] = []
+    let storageRef = Storage.storage().reference(withPath: "Itempictures")
     
     private init (){
     }
@@ -149,10 +151,14 @@ class FirebaseRDModel {
         return totalPrice
     }
     
-    func debugPrint(){
-        for OrderItem in model.dataforTable {
-            print("behnis \(String(describing: OrderItem))")
-        }
+    func setItemtobeOrdered (item: MenueItem){
+        model.Itemtobeordered = item
     }
     
+    func getItemtobeOrdered () -> MenueItem {
+        guard (model.Itemtobeordered != nil) else {
+        return MenueItem.init(name: "", price: 0.00, image: #imageLiteral(resourceName: "one"), imageRef: model.storageRef, key: "")
+    }
+        return model.Itemtobeordered!
+    }
 }

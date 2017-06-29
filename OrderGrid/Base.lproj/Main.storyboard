@@ -39,7 +39,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-M2-zUk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="one" translatesAutoresizingMaskIntoConstraints="NO" id="Zhb-M2-zUk">
                                                     <rect key="frame" x="75" y="20" width="150" height="150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="150" id="F8S-Nx-rzG"/>
@@ -327,5 +327,6 @@
         <image name="Bestellverlauf_selected" width="25" height="25"/>
         <image name="Restaurant" width="25" height="25"/>
         <image name="Restaurant_selected" width="25" height="25"/>
+        <image name="one" width="150" height="150"/>
     </resources>
 </document>

@@ -12,9 +12,6 @@ import Firebase
 
 class ViewController: UIViewController {
     @IBOutlet weak var TablePicker: UIPickerView!
-    var names = ["Burger", "Clubmate", "Goasmass", "Pizza", "Radler", "Sandwich"]
-    var prices = [Double]()
-    var images = [#imageLiteral(resourceName: "one"),#imageLiteral(resourceName: "two"),#imageLiteral(resourceName: "three"),#imageLiteral(resourceName: "four"),#imageLiteral(resourceName: "five"),#imageLiteral(resourceName: "six")]
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var RestaurantName: UILabel!
@@ -25,6 +22,8 @@ class ViewController: UIViewController {
     
     var collectionDS: UICollectionViewDataSource!
     var collectionDelegate: UICollectionViewDelegate!
+    let myFormatter : EuroFormatter = EuroFormatter()
+    var FirebaseController : FirebaseDatabasePushController! = FirebaseDatabasePushController()
     
     var model : FirebaseRDModel!
     var menueModel : FirebaseMenueModel!
@@ -58,9 +57,8 @@ class ViewController: UIViewController {
         
         nc.addObserver(self, selector: #selector(setupMyRestaurant), name: Notification.Name("firerestaurantreload"), object: nil)
         nc.addObserver(self, selector: #selector(reloadCollectionView), name: Notification.Name("fireReloadCollection"), object: nil)
+        nc.addObserver(self, selector: #selector(showOrderDialog), name: Notification.Name("OrderAction"), object: nil)
         
-        prices = [6.00, 1.20, 4.50, 7.00, 3.50, 1.20]
-        //addDummyItems()
         setupMyRestaurant()
         reloadCollectionView()
     }
@@ -72,14 +70,38 @@ class ViewController: UIViewController {
     
     func reloadCollectionView(){
     collectionView.reloadData()
-    model.debugPrint()
     }
     func setupMyRestaurant(){
         print("THE NEW RESTAURANT NAME IS: \(model.getRestaurantName())")
         RestaurantName.text = model.getRestaurantName()
         TablePicker.reloadAllComponents()
+    }
+    
+    func showOrderDialog(){
+        let tempitem: MenueItem = model.getItemtobeOrdered()
         
-        model.debugPrint()
+        let alertSheetController = UIAlertController(title: "Bestellung", message: "Wollen sie: \(tempitem.name) für: \(myFormatter.string(for: tempitem.price) ?? ("0,00€")) bestellen?",preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Abbrechen", style: .cancel) { action -> Void in
+//            todo: cancelAction
+        }
+        alertSheetController.addAction(cancelAction)
+        
+        let enterAction = UIAlertAction(title: "Bestellen", style: .default) { action -> Void in
+                self.orderMyItem()
+            }
+        alertSheetController.addAction(enterAction)
+        
+        self.present(alertSheetController, animated: true) {}
+    }
+    
+    func orderMyItem(){
+        let tempitem: MenueItem = model.getItemtobeOrdered()
+        print("Getting ordered: \(tempitem))")
+        FirebaseController.addNewOrder(name: tempitem.name, price: tempitem.price, table: model.getTable())
+        
+        
+        
+        
     }
     
 //    func addDummyItems(){

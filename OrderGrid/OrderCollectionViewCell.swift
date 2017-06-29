@@ -15,16 +15,24 @@ class OrderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var OrderBtn: UIButton!
     
     let model : FirebaseRDModel = FirebaseRDModel()
-    let ordermodel : FirebaseMenueModel = FirebaseMenueModel()
+    let menumodel : FirebaseMenueModel = FirebaseMenueModel()
     var FirebaseController : FirebaseDatabasePushController! = FirebaseDatabasePushController()
     
     
     
     
     @IBAction func OrderAction(_ sender: UIButton) {
+        let nc = NotificationCenter.default
+        
+        let tempitem : MenueItem = menumodel.getElement(from: sender.tag)
+        model.setItemtobeOrdered(item: tempitem)
+        nc.post(name: Notification.Name("OrderAction"), object: nil)
         print("Item to be ordered!" + ItemNameLabel.text!)
-        FirebaseController.addNewOrder(name: ordermodel.getElement(from: sender.tag).name, price: ordermodel.getElement(from: sender.tag).price, table: model.getTable())
         
-        
+        //FirebaseController.addNewOrder(name: ordermodel.getElement(from: sender.tag).name, price: ordermodel.getElement(from: //sender.tag).price,  //table: model.getTable())
+        }
+    
+    func pushOrderToFIR (orderitem : OrderItem){
+        FirebaseController.addNewOrder(name: orderitem.name, price: orderitem.price, table: model.getTable())
     }
 }

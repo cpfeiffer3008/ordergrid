@@ -25,7 +25,7 @@ class FirebaseStorageController {
     
     func downloadFromFIRStorage(ref : StorageReference, forCell: Int) -> UIImage {
         
-        var image : UIImage = #imageLiteral(resourceName: "two")
+        var image : UIImage = #imageLiteral(resourceName: "one")
         MenuModel.setImgDownloadHasStarted(started: true, i: forCell)
         print("IMAGE: start")
         print("IMAGE: \(ref)")
