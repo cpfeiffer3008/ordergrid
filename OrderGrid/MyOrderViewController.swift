@@ -10,10 +10,12 @@ import UIKit
 
 class MyOrderViewController: UIViewController {
     let model = FirebaseRDModel()
-    @IBOutlet weak var SelectedTableLabel: UILabel!
-    @IBOutlet weak var OrderTable: UITableView!
+    let myFormatter : EuroFormatter = EuroFormatter()
     var datasource : OrderDataSource!
     var delegate : OrderDelegate!
+    
+    @IBOutlet weak var SelectedTableLabel: UILabel!
+    @IBOutlet weak var OrderTable: UITableView!
     @IBOutlet weak var totalPrice: UILabel!
 
     override func viewDidLoad() {
@@ -59,7 +61,7 @@ class MyOrderViewController: UIViewController {
     }
     
     func calculateTotalPrice(){
-       totalPrice.text =  String(model.calculateToatalPrice())
+       totalPrice.text =  ("Gesamtpreis: \(myFormatter.string(for: model.calculateToatalPrice())!)")
     }
     
 

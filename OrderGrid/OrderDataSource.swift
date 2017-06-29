@@ -10,6 +10,7 @@ import UIKit
 
 class OrderDataSource: NSObject, UITableViewDataSource {
     fileprivate let data : FirebaseRDModel
+    fileprivate let myFormatter : EuroFormatter = EuroFormatter()
     
     override init() {
         data = FirebaseRDModel()
@@ -25,7 +26,7 @@ class OrderDataSource: NSObject, UITableViewDataSource {
         
         print("Binding OrderCell")
         cell.ItemLabel.text = entry.name
-        cell.PriceLabel.text = entry.price
+        cell.PriceLabel.text = myFormatter.string(for: entry.price)
         
         
         return cell

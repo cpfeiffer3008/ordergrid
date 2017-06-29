@@ -12,6 +12,8 @@ import Firebase
 class MenueDataSource: NSObject, UICollectionViewDataSource {
     fileprivate let data : FirebaseMenueModel
     fileprivate let FIRStorageController : FirebaseStorageController
+    fileprivate let myFormatter : EuroFormatter = EuroFormatter()
+    
     
     override init() {
         data = FirebaseMenueModel()
@@ -28,11 +30,18 @@ class MenueDataSource: NSObject, UICollectionViewDataSource {
         
         let tempitem = data.getElement(from: indexPath.row)
         
-        cell.ItemNameLabel.text = tempitem.name
-        cell.ItemPriceLabel.text = String("\(tempitem.price) €")
-        cell.ItemImageView.image = FIRStorageController.downloadFromFIRStorage(ref: tempitem.image)
-        cell.ItemImageView.contentMode = .scaleAspectFit
         print("setting up cell" + String(describing: indexPath))
+        cell.ItemNameLabel.text = tempitem.name
+        
+        cell.ItemPriceLabel.text = myFormatter.string(for: tempitem.price)
+        if (!tempitem.ImageDownloadHasStarted){
+            cell.ItemImageView.image = FIRStorageController.downloadFromFIRStorage(ref: tempitem.image,forCell:indexPath.row)
+            }
+        cell.ItemImageView.image = tempitem.imageRes
+        cell.ItemImageView.contentMode = .scaleAspectFit
+        cell.OrderBtn.tag = indexPath.row
+        
+        
         
         
         return cell
@@ -41,5 +50,7 @@ class MenueDataSource: NSObject, UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.numberofEntries()
     }
+    
+    
 
 }

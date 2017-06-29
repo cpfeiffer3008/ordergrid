@@ -12,16 +12,18 @@ class OrderCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var ItemImageView: UIImageView!
     @IBOutlet weak var ItemNameLabel: UILabel!
     @IBOutlet weak var ItemPriceLabel: UILabel!
-    let model : FirebaseRDModel = FirebaseRDModel()
+    @IBOutlet weak var OrderBtn: UIButton!
     
+    let model : FirebaseRDModel = FirebaseRDModel()
+    let ordermodel : FirebaseMenueModel = FirebaseMenueModel()
     var FirebaseController : FirebaseDatabasePushController! = FirebaseDatabasePushController()
     
     
     
     
-    @IBAction func OrderAction(_ sender: Any) {
+    @IBAction func OrderAction(_ sender: UIButton) {
         print("Item to be ordered!" + ItemNameLabel.text!)
-        FirebaseController.addNewOrder(name: ItemNameLabel.text!, price: ItemPriceLabel.text!, table: model.getTable())
+        FirebaseController.addNewOrder(name: ordermodel.getElement(from: sender.tag).name, price: ordermodel.getElement(from: sender.tag).price, table: model.getTable())
         
         
     }

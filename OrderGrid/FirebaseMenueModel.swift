@@ -49,6 +49,14 @@ class FirebaseMenueModel: NSObject {
     func append(element : MenueItem){
         model.data.append(element)
     }
+    func setImage(newImage : UIImage, i: Int){
+        model.data[i].imageRes = newImage
+        self.notifyCollectionToReload()
+    }
+    
+    func setImgDownloadHasStarted(started: Bool, i: Int){
+        model.data[i].ImageDownloadHasStarted = started
+    }
     
     func observeFirebaseMenue(){
         model.ref.observe(.value, with: { snapshot in

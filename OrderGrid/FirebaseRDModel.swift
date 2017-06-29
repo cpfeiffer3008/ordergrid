@@ -144,9 +144,15 @@ class FirebaseRDModel {
     func calculateToatalPrice() ->Double{
         var totalPrice : Double = 0
         for OrderItem in model.dataforTable {
-        totalPrice = totalPrice + Double(OrderItem.price)!
+        totalPrice = totalPrice + Double(OrderItem.price)
         }
         return totalPrice
+    }
+    
+    func debugPrint(){
+        for OrderItem in model.dataforTable {
+            print("behnis \(String(describing: OrderItem))")
+        }
     }
     
 }

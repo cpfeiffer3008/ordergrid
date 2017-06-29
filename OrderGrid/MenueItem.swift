@@ -16,17 +16,21 @@ struct MenueItem {
     let price : Double
     let ref: DatabaseReference?
     let image : StorageReference
+    var imageRes : UIImage
     let storage = Storage.storage()
     let storageRef : StorageReference
+    var ImageDownloadHasStarted : Bool
     
     
-    init(name: String, price: Double, image : StorageReference, key: String) {
+    init(name: String, price: Double, image : UIImage, imageRef : StorageReference, key: String) {
         self.key = key
         self.name = name
         self.price = price
-        self.image = image
+        self.imageRes = image
+        self.image = imageRef
         self.ref = nil
         self.storageRef = storage.reference()
+        self.ImageDownloadHasStarted = false
     }
     
     init(snapshot: DataSnapshot) {
@@ -37,6 +41,8 @@ struct MenueItem {
         storageRef = storage.reference()
         let tempimage = snapshotValue["picture"] as! String
         image = storageRef.child("Itempictures/\(tempimage)")
+        imageRes = #imageLiteral(resourceName: "one")
+        ImageDownloadHasStarted = false
         
         
 

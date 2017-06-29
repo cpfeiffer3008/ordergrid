@@ -12,6 +12,7 @@ import Firebase
 class FirebaseStorageController {
     let storageRef = Storage.storage().reference(withPath: "Itempictures")
     var tempimage : UIImage? = nil
+    let MenuModel : FirebaseMenueModel = FirebaseMenueModel()
     
 //    func uploadToFIRStorage (data: NSData){
 //        let uploadMetaData = StorageMetadata()
@@ -22,17 +23,22 @@ class FirebaseStorageController {
 //                print("Upload complete! Have some juicy Metadata: \(uploadMetaData)")}}
 //    }
     
-    func downloadFromFIRStorage(ref : StorageReference) -> UIImage {
+    func downloadFromFIRStorage(ref : StorageReference, forCell: Int) -> UIImage {
         
-        var image : UIImage = #imageLiteral(resourceName: "one")
+        var image : UIImage = #imageLiteral(resourceName: "two")
+        MenuModel.setImgDownloadHasStarted(started: true, i: forCell)
         print("IMAGE: start")
         print("IMAGE: \(ref)")
         ref.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let error = error {
                print("IMAGE: \(ref) has had a error: \(error)")
-            } else {
+            }
+            else {
             print("IMAGE Data: \(String(describing: data))")
-            self.saveImage(tempImage: UIImage(data: data!)!)
+            image = UIImage(data: data!)!
+            // Notification nach Download fertig!
+            self.MenuModel.setImage(newImage: image, i: forCell)
+            
             }
         }
             return image

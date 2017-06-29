@@ -46,7 +46,7 @@
                                                         <constraint firstAttribute="width" constant="150" id="ogB-Nu-MZz"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OM-bE-Gyo">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OM-bE-Gyo">
                                                     <rect key="frame" x="20" y="250" width="260" height="30"/>
                                                     <state key="normal" title="Bestellen"/>
                                                     <connections>
@@ -89,6 +89,7 @@
                                             <outlet property="ItemImageView" destination="Zhb-M2-zUk" id="RaT-RE-lea"/>
                                             <outlet property="ItemNameLabel" destination="Egt-Wi-qjY" id="dHb-Ub-6dZ"/>
                                             <outlet property="ItemPriceLabel" destination="GNu-5I-9xF" id="Zel-eQ-CWL"/>
+                                            <outlet property="OrderBtn" destination="7OM-bE-Gyo" id="1Fj-8S-5RO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -213,14 +214,14 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Goassmass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhm-Fp-FLg">
                                                     <rect key="frame" x="13" y="11" width="105" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="SXE-pI-kcX"/>
+                                                        <constraint firstAttribute="height" constant="30" id="SXE-pI-kcX"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="4,50€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGD-Wo-CkG">
-                                                    <rect key="frame" x="313.5" y="8" width="55.5" height="21"/>
+                                                    <rect key="frame" x="667.5" y="8" width="55.5" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="NUX-Tk-7Px"/>
                                                     </constraints>

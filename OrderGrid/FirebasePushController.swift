@@ -20,7 +20,7 @@ class FirebaseDatabasePushController: NSObject {
     }
 
     
-    func addNewOrder (name : String , price : String, table : Int){
+    func addNewOrder (name : String , price : Double, table : Int){
         let orderitem = OrderItem(name: name, table: table, price: price)
         let orderItemRef = self.orderref.childByAutoId()
         orderItemRef.setValue(orderitem.toAnyObject())

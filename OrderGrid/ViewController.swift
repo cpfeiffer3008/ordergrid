@@ -72,11 +72,14 @@ class ViewController: UIViewController {
     
     func reloadCollectionView(){
     collectionView.reloadData()
+    model.debugPrint()
     }
     func setupMyRestaurant(){
         print("THE NEW RESTAURANT NAME IS: \(model.getRestaurantName())")
         RestaurantName.text = model.getRestaurantName()
         TablePicker.reloadAllComponents()
+        
+        model.debugPrint()
     }
     
 //    func addDummyItems(){
